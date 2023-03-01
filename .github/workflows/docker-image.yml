@@ -13,7 +13,7 @@ jobs:
       IMAGE_NAME: ${{ secrets.DOCKER_IMAGE }}
       DOCKER_REPOSITORY: ${{ secrets.DOCKER_USERNAME }}
       TAG_PREFIX: master
-      ARGOCD_ENDPOINT: 0032-124-109-45-231.in.ngrok.io #without https
+      ARGOCD_ENDPOINT: 2810-124-109-45-231.in.ngrok.io #without https
       INSECURE: true
       APP_NAME: goappdef
       
