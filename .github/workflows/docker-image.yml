@@ -49,9 +49,9 @@ jobs:
     - name: ArgoCD Application Sync Action
       uses: omegion/argocd-actions@v0.2.0
       with:
-        address: ${{ ARGOCD_ENDPOINT }}
+        address: ${{ env.ARGOCD_ENDPOINT }}
         token: ${{ secrets.ARGOCD_AUTH_TOKEN }}
-        insecure: ${{ INSECURE }}
-        appName: ${{ APP_NAME }}
+        insecure: ${{ env.INSECURE }}
+        appName: ${{ env.APP_NAME }}
         action: sync
         imageTag: ${{steps.getImageTag.outputs.imagetag}}
