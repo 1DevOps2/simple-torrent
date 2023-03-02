@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: torrent
-        image: 2devops3/torrent:master-21
+        image: 2devops3/torrent:master-22
         ports:
         - containerPort: 3000
