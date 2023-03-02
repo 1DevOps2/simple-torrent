@@ -8,7 +8,7 @@ This project is a re-branded fork of [cloud-torrent](https://github.com/jpillora
 
 # Features.
 
-* Individual file download control (1.1.3+).
+* Individual file download control (1.1.3+)..
 * Run external program on tasks completion: `DoneCmd`
 * Stops task when seeding ratio reached: `SeedRatio`
 * Download/Upload speed limiter: `UploadRate`/`DownloadRate`
