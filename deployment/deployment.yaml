@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: torrent
-        image: 2devops3/torrent:
+        image: 2devops3/torrent$TAG_PREFIX-$git_hash
         ports:
         - containerPort: 3000
