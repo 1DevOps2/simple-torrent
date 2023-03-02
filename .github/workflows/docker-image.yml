@@ -45,8 +45,8 @@ jobs:
       run: |
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
         echo "Pushing image to Docker Hub..."
-        docker push $DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$git_hash
-        echo "::set-output name=image::$DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$IMAGE_TAG"
+        docker push $DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$IMAGE_TAG
+        echo "::set-output name=image::$DOCKER_REPOSITORY/$IMAGE_NAME:$TAG_PREFIX-$git_hash"
     - name: Get Image Tag
       id: getImageTag
       run: |
