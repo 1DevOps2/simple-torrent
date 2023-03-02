@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: ${{ secrets.DOCKER_IMAGE }}
+      IMAGE_TAG: ${{ github.run_number }}
       DOCKER_REPOSITORY: ${{ secrets.DOCKER_USERNAME }}
       TAG_PREFIX: master
       ARGOCD_ENDPOINT: 1132-124-109-45-231.in.ngrok.io #without https
@@ -54,7 +55,7 @@ jobs:
     
     - name: Update image tag in manifest
       run: |
-         sudo cp deployment/deployment.org  deployment/deployment.yaml  && sudo sed -i -e "s|replace_me|$TAG_PREFIX-$git_hash|" deployment/deployment.yaml
+         sudo cp deployment/deployment.org  deployment/deployment.yaml  && sudo sed -i -e "s|replace_me|$TAG_PREFIX-$IMAGE_TAG|" deployment/deployment.yaml
          
       # Commit all changed files back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v4
