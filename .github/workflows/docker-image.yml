@@ -1,8 +1,8 @@
 name: Go Docker Image CI
 
 on:
-  push:
-    branches: [ master ]
+  repository_dispatch:
+    type: [my-event]
 
 jobs:
 
